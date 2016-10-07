@@ -25,5 +25,5 @@ RUN apt-get clean  && rm -rf /tmp/* /var/tmp/*    && rm -rf /var/lib/apt/lists/*
 EXPOSE 3838
 
 COPY ./shiny-server.sh /usr/bin/shiny-server.sh
-
+RUN  chmod 777 /usr/bin/shiny-server.sh
 CMD ["/usr/bin/shiny-server.sh"]
